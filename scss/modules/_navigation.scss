@@ -10,17 +10,17 @@
   align-items: end;
   font-family: Arial, sans-serif;
 
-  ul {
+  &__menu {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 257px;
     display: inline-flex;
     background: linear-gradient(to bottom, #dddddd, #d4d4d4);
     border: 1px solid #fbfbfb;
     border-radius: 5px;
   }
 
-  li {
+  &__list {
     position: relative;
     border-left: 1px solid #fbfbfb;
     &:first-child {
@@ -52,7 +52,7 @@
     }
   }
 
-  a {
+  &__link {
     display: inline-block;
     height: 50px;
     line-height: 50px;
@@ -70,23 +70,79 @@
       color: #ffffff;
       text-shadow: none;
     }
-
-
   }
+
   &__submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 20px;
-    background-color: #000000;
-    color: #ffffff;
+    padding:12px 0 16px 16px;
+    display:none;
+    position:absolute;
+    top:50px;
+    left:0;
+    width:332px;
+    height:92px;
+    background-color:#252525;
+    box-shadow:0 3px 4px #000;
+    z-index:2;
+    text-shadow:none;
 
     li:hover & {
       display: block;
     }
 
+    .submenu-left {
+      float:left;
+      margin-right:16px;
+      width:150px;
+    }
+
+    .submenu-right {
+      margin:0 16px 0 166px;
+      width:150px;
+    }
+
+    .submenu-list {
+      padding:0;
+      margin:0;
+      list-style:none;
+      position:relative;
+      overflow:hidden;
+
+      li {
+        overflow:hidden;
+        height:24px;
+        width:150px;
+        border-top:1px solid #333;
+        font: bold 11px Arial,Tahoma,Verdana,Helvetica,sans-serif;
+        position:relative;
+        color:#666;
+        &:first-child {
+          border-top: none;
+          }
+
+        a {
+          position:relative;
+          display:block;
+          color:inherit;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+
+      .submenu-list-text {
+        position:absolute;
+        top:4px;
+        left:0;
+      }
+
+      .submenu-list-number {
+        position:absolute;
+        top:3px;
+        right:0;
+        padding:2px 3px;
+        background-color:#2f2f2f;
+        border-radius:3px;
+      }
+    }
   }
-
-
 }
