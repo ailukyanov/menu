@@ -24,5 +24,3 @@ gulp.task('default', gulp.series('sass', function(){
     gulp.watch("*.html").on("change", browserSync.reload);
     gulp.watch('./scss/**/*.scss', gulp.series('sass'));
 }));
-
-
